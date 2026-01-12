@@ -49,7 +49,7 @@ const TopBar: React.FC = () => {
             </Link>
 
             {/* Info Section */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-18">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 border rounded flex items-center justify-center">
                   <MapPin className="w-5 h-5" />
@@ -72,25 +72,14 @@ const TopBar: React.FC = () => {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-semibold">+91 80859-29292</div>
+                  <div className="font-semibold">+91 98765 43210</div>
                   <div className="text-xs text-gray-500">
-                    supremepss@rediffmail.com
+                    info@company.com
                   </div>
                 </div>
               </a>
 
-              <a
-                href="/brochures"
-                className="flex items-center gap-3 hover:text-blue-600 transition"
-              >
-                <div className="w-10 h-10 border rounded flex items-center justify-center">
-                  <Download className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="font-semibold">Downloads</div>
-                  <div className="text-xs text-gray-500">PDF Brochures</div>
-                </div>
-              </a>
+           
             </div>
           </div>
 
