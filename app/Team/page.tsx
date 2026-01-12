@@ -1,13 +1,16 @@
 "use client";
-
-import React from "react";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
-import { TeamMember } from "../Types/Team/page";
 
+type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+  linkedin?: string;
+  email?: string;
+};
 const teamMembers: TeamMember[] = [
   {
     name: "John Anderson",
