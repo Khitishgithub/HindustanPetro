@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import Footer from "./Components/Footer";
 import NavMenu from "./Components/HeaderSection/NavMenu";
+import TopBar from "./Components/TopBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +31,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <header className="fixed top-0 left-0 w-full z-50">
+          <TopBar />
           <NavMenu />
         </header>
 
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="flex-1 pt-24">{children}</main>
 
         <footer className="mt-auto">
           <Footer />

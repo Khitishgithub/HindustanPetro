@@ -122,3 +122,23 @@
   }
 }
 
+
+
+
+
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-gadget {
+  font-family: inherit !important;
+}
+
+.goog-te-gadget span {
+  display: none;
+}

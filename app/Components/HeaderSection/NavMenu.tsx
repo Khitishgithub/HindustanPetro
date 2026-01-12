@@ -15,7 +15,7 @@ import { Tag, Menu, X, Search } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 
-/* ================== SHARED STYLES ================== */
+
 const navItemBase =
   "px-6 py-2 text-sm font-semibold uppercase transition-colors";
 const navHover =

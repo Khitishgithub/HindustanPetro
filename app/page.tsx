@@ -1,13 +1,3 @@
-
-
-
 export default function Home() {
-  return (
-    <div>
-      {/* <TopBar/> */}
-  
-      
-
-    </div>
-  );
+  return <div></div>;
 }
