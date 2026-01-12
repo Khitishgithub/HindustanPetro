@@ -44,7 +44,7 @@ const TopBar: React.FC = () => {
                 width={160}
                 height={60}
                 priority
-                className="h-auto w-[140px] md:w-[100px] object-contain"
+                className="h-auto w-[80px] md:w-[100px] object-contain"
               />
             </Link>
 
@@ -55,7 +55,7 @@ const TopBar: React.FC = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-semibold">
+                  <div className="text-xs xl:text-base font-semibold">
                     Mon - Sat : 9.00 - 19.30
                   </div>
                   <div className="text-xs text-gray-500">
