@@ -5,7 +5,6 @@ import { Toaster } from "sonner";
 import Footer from "./Components/Footer";
 import NavMenu from "./Components/HeaderSection/NavMenu";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,28 +21,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        {/* Header fixed at top */}
         <header className="fixed top-0 left-0 w-full z-50">
           <NavMenu />
         </header>
 
-        {/* Main content with padding-top to avoid overlap with fixed header */}
         <main className="flex-1 pt-20">{children}</main>
 
-        {/* Footer fixed at bottom (optional) */}
         <footer className="mt-auto">
           <Footer />
         </footer>
 
-        {/* Toaster */}
         <Toaster richColors position="top-right" />
       </body>
     </html>
