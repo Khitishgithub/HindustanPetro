@@ -5,6 +5,7 @@ import Products from "./Components/HeroSection/Products";
 import QualityPolicy from "./Components/HeroSection/QualtyPolicy";
 import WhyUs from "./Components/HeroSection/WhyUs";
 import Team from "./Team/page";
+import MainLandingPage from "./Components/HeroSection/MainLandingPage";
 
 export default function Home() {
   // Animation variants for sliding in from left
@@ -46,7 +47,10 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
+      <div>
+        <MainLandingPage />
+      </div>
       <motion.div
         initial="hidden"
         whileInView="visible"

@@ -34,7 +34,7 @@ const About: React.FC = () => {
             <div className="order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px] bg-gradient-to-br from-[#3d5a80] to-[#2d4a70]">
                 <Image
-                  src="/images/About.jpg"
+                  src="/Images/About.jpg"
                   alt="Hindustan Petro By Products Facility"
                   width={600}
                   height={400}
