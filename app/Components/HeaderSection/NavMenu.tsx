@@ -15,7 +15,6 @@ import { Tag, Menu, X, Search } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 
-
 const navItemBase =
   "px-6 py-2 text-sm font-semibold uppercase transition-colors";
 const navHover =
@@ -30,14 +29,11 @@ const NavMenu: React.FC = () => {
   const [search, setSearch] = useState("");
 
   const products = [
-    { name: "Light Diesel Oil", href: "/products/1" },
-    { name: "Product Category 2", href: "/products/2" },
-    { name: "Product Category 3", href: "/products/3" },
-    { name: "Product Category 4", href: "/products/4" },
-    { name: "Product Category 5", href: "/products/5" },
-    { name: "Product Category 6", href: "/products/6" },
-    { name: "Product Category 7", href: "/products/7" },
-    { name: "Product Category 8", href: "/products/8" },
+    { name: "Light Diesel Oil", href: "/Products/1" },
+    { name: "Fuel Oil", href: "/Products/2" },
+    { name: "Mixed Hydrocarbon Oil", href: "/Products/3" },
+    { name: "Tyre Oil", href: "/Products/4" },
+    { name: "GI Wire", href: "/Products/5" },
   ];
 
   const filteredProducts = products.filter((p) =>
@@ -51,12 +47,10 @@ const NavMenu: React.FC = () => {
     <nav className="bg-[#3d5a80] text-white mt-5">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14">
-
           {/* ================= DESKTOP MENU ================= */}
           <div className="hidden md:flex">
             <NavigationMenu>
               <NavigationMenuList className="flex items-center gap-1">
-
                 {/* HOME */}
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
@@ -103,7 +97,6 @@ const NavMenu: React.FC = () => {
 
                   <NavigationMenuContent className="bg-transparent shadow-none border-none">
                     <div className="w-[560px] rounded-2xl bg-white shadow-2xl overflow-hidden">
-
                       {/* HEADER */}
                       <div className="bg-gradient-to-r from-[#3d5a80] to-[#2d4a70] p-5 text-white">
                         <h4 className="text-lg font-semibold">
@@ -195,7 +188,6 @@ const NavMenu: React.FC = () => {
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
-
               </NavigationMenuList>
             </NavigationMenu>
           </div>
@@ -215,7 +207,6 @@ const NavMenu: React.FC = () => {
         {/* ================= MOBILE MENU ================= */}
         {isOpen && (
           <div className="md:hidden bg-[#2d4a70] px-4 py-4 space-y-4">
-
             {[
               { name: "Home", href: "/" },
               { name: "About", href: "/About" },

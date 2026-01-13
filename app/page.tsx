@@ -1,6 +1,8 @@
 import About from "./About/page";
+import Products from "./Components/HeroSection/Products";
 import QualityPolicy from "./Components/HeroSection/QualtyPolicy";
 import WhyUs from "./Components/HeroSection/WhyUs";
+
 import Team from "./Team/page";
 
 export default function Home() {
@@ -8,6 +10,9 @@ export default function Home() {
     <div>
       <div className="">
         <About />
+      </div>
+      <div className="">
+        <Products />
       </div>
       <div className="">
         <Team />

@@ -19,9 +19,7 @@ const About: React.FC = () => {
       {/* HERO SECTION (MATCHES TEAM GRADIENT) */}
       <section className="bg-gradient-to-r from-[#3d5a80] to-[#2d4a70] py-24 text-white">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            About Us
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
           <p className="max-w-2xl mx-auto text-white/80 text-lg">
             About Hindustan Petro By Products
           </p>
@@ -46,10 +44,10 @@ const About: React.FC = () => {
               </p>
 
               <p className="text-gray-600 leading-relaxed mb-4">
-                We operate as an Individual Proprietor–based venture and continue
-                to adapt to the ever-evolving requirements of our customers. Our
-                firm is a leading supplier of premium petroleum products that
-                comply with industry standards.
+                We operate as an Individual Proprietor–based venture and
+                continue to adapt to the ever-evolving requirements of our
+                customers. Our firm is a leading supplier of premium petroleum
+                products that comply with industry standards.
               </p>
 
               <p className="text-gray-600 leading-relaxed">
@@ -103,24 +101,6 @@ const About: React.FC = () => {
                   </div>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-
-          {/* PRODUCT LIST */}
-          <div className="mt-16">
-            <h2 className="text-2xl font-semibold text-center bg-gradient-to-r from-[#3d5a80] to-[#2d4a70] bg-clip-text text-transparent mb-8">
-              Our Products
-            </h2>
-
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {products.map((product, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition text-center font-medium text-gray-700"
-                >
-                  {product}
-                </div>
-              ))}
             </div>
           </div>
         </div>
