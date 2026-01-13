@@ -11,127 +11,130 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
+import { products } from "@/utils/data";
+
 
 const Footer = () => {
   return (
     <footer className="bg-gray-50">
-      <div className="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
+      <div className="mx-auto max-w-7xl px-4 py-10">
+        {/* TOP SECTION */}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           {/* LOGO */}
-          <div className="mb-6 md:mb-0">
-            <Link href="/" className="flex items-center">
+          <div className="flex flex-col gap-4">
+            <Link href="/" className="inline-flex items-center">
               <Image
                 src="/Images/Logo.png"
                 alt="Company Logo"
-                width={120}
-                height={28}
-                className="me-3 object-contain"
+                width={140}
+                height={32}
+                className="object-contain"
               />
             </Link>
-           
+            <p className="text-sm text-body max-w-xs leading-relaxed">
+              Delivering trusted petrochemical products with quality,
+              consistency, and commitment since 1970.
+            </p>
           </div>
 
-          {/* LINKS / PRODUCTS / CONTACT */}
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            {/* LINKS */}
-            <div>
-              <h2 className="mb-6 text-sm font-bold text-heading uppercase relative inline-block group">
-                Links
-                <span className="absolute left-0 bottom-0 w-1/2 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </h2>
+          {/* LINKS */}
+          <div>
+            <h2 className="mb-5 text-sm font-bold uppercase text-heading relative inline-block group">
+              Links
+              <span className="absolute left-0 -bottom-1 h-[2px] w-1/2 bg-red-500 transition-all duration-300 group-hover:w-full" />
+            </h2>
+            <ul className="space-y-3 text-sm text-body font-medium">
+              <li>
+                <Link href="/" className="hover:text-red-500 transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/About" className="hover:text-red-500 transition">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/Team" className="hover:text-red-500 transition">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/Contact" className="hover:text-red-500 transition">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-              <ul className="text-body font-medium">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Home
+          {/* PRODUCTS */}
+          <div>
+            <h2 className="mb-5 text-sm font-bold uppercase text-heading relative inline-block group">
+              Products
+              <span className="absolute left-0 -bottom-1 h-0.5 w-1/2 bg-red-500 transition-all duration-300 group-hover:w-full" />
+            </h2>
+
+            <ul className="space-y-3 text-sm text-body font-medium">
+              {products.map((product) => (
+                <li key={product.name}>
+                  <Link
+                    href={product.href}
+                    className="hover:text-red-500 transition"
+                  >
+                    {product.name}
                   </Link>
                 </li>
-                <li className="mb-4">
-                  <Link href="/About" className="hover:underline">
-                    About
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link href="/Team" className="hover:underline">
-                    Team
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link href="/Contact" className="hover:underline">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
+          </div>
 
-            {/* PRODUCTS */}
-            <div>
-              <h2 className="mb-6 text-sm font-bold text-heading uppercase relative inline-block group">
-                Products
-                <span className="absolute left-0 bottom-0 w-1/2 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </h2>
-
-              <ul className="text-body font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Product 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Product 2
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* CONTACT */}
-            <div>
-              <h2 className="mb-6 text-sm font-bold text-heading uppercase relative inline-block group">
-                Contact
-                <span className="absolute left-0 bottom-0 w-1/2 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full" />
-              </h2>
-
-              <ul className="space-y-4 text-body font-medium">
-                <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-red-500 mt-0.5" />
-                  <span>New Delhi, India</span>
-                </li>
-
-                <li className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-red-500 mt-0.5" />
-                  <span>info@company.com</span>
-                </li>
-
-                <li className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-red-500 mt-0.5" />
-                  <span>+91 98765 43210</span>
-                </li>
-              </ul>
-            </div>
+          {/* CONTACT */}
+          <div>
+            <h2 className="mb-5 text-sm font-bold uppercase text-heading relative inline-block group">
+              Contact
+              <span className="absolute left-0 -bottom-1 h-[2px] w-1/2 bg-red-500 transition-all duration-300 group-hover:w-full" />
+            </h2>
+            <ul className="space-y-4 text-sm text-body">
+              <li className="flex gap-3">
+                <MapPin className="h-5 w-5 text-red-500 shrink-0" />
+                <span className="leading-relaxed">
+                  6CP6+GC8, Heavy Industrial Area Hathkhoj, Charoda,
+                  Chhattisgarh 490024
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-red-500 shrink-0" />
+                <span>Hindustanpetro2020@mail.com</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-red-500 shrink-0" />
+                <span>+91 7987584003</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <hr className="my-6 border-default sm:mx-auto lg:my-8" />
+        {/* DIVIDER */}
+        <hr className="my-8 border-gray-200" />
 
-        {/* BOTTOM */}
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-body sm:text-center">
+        {/* BOTTOM SECTION */}
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <span className="text-sm text-body text-center sm:text-left">
             © {new Date().getFullYear()}{" "}
-            <Link href="/" className="hover:underline text-red-500">
+            <Link href="/" className="text-red-500 hover:underline">
               Hindustan Petro By Products
             </Link>
             . All Rights Reserved.
           </span>
 
           {/* SOCIAL ICONS */}
-          <div className="flex items-center gap-5">
-            <Facebook className="w-5 h-5 text-body hover:text-heading cursor-pointer" />
-            <Twitter className="w-5 h-5 text-body hover:text-heading cursor-pointer" />
-            <Instagram className="w-5 h-5 text-body hover:text-heading cursor-pointer" />
-            <Github className="w-5 h-5 text-body hover:text-heading cursor-pointer" />
-            <Dribbble className="w-5 h-5 text-body hover:text-heading cursor-pointer" />
-            <Linkedin className="w-5 h-5 text-body hover:text-heading cursor-pointer" />
+          <div className="flex justify-center gap-5 sm:justify-end">
+            <Facebook className="h-5 w-5 cursor-pointer text-body hover:text-red-500 transition" />
+            <Twitter className="h-5 w-5 cursor-pointer text-body hover:text-red-500 transition" />
+            <Instagram className="h-5 w-5 cursor-pointer text-body hover:text-red-500 transition" />
+            <Github className="h-5 w-5 cursor-pointer text-body hover:text-red-500 transition" />
+            <Dribbble className="h-5 w-5 cursor-pointer text-body hover:text-red-500 transition" />
+            <Linkedin className="h-5 w-5 cursor-pointer text-body hover:text-red-500 transition" />
           </div>
         </div>
       </div>

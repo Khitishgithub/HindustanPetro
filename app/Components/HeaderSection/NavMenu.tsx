@@ -14,6 +14,7 @@ import {
 import { Tag, Menu, X, Search } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
+import { products } from "@/utils/data";
 
 const navItemBase =
   "px-6 py-2 text-sm font-semibold uppercase transition-colors";
@@ -27,14 +28,6 @@ const NavMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [search, setSearch] = useState("");
-
-  const products = [
-    { name: "Light Diesel Oil", href: "/Products/1" },
-    { name: "Fuel Oil", href: "/Products/2" },
-    { name: "Mixed Hydrocarbon Oil", href: "/Products/3" },
-    { name: "Tyre Oil", href: "/Products/4" },
-    { name: "GI Wire", href: "/Products/5" },
-  ];
 
   const filteredProducts = products.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase())
