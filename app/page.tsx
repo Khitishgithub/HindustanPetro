@@ -6,6 +6,9 @@ import QualityPolicy from "./Components/HeroSection/QualtyPolicy";
 import WhyUs from "./Components/HeroSection/WhyUs";
 import Team from "./Team/page";
 import MainLandingPage from "./Components/HeroSection/MainLandingPage";
+import LocationMap from "./Components/HeroSection/LocationMap";
+import ScrollToTop from "./Components/ScrollToTop";
+
 
 export default function Home() {
   // Animation variants for sliding in from left
@@ -96,6 +99,15 @@ export default function Home() {
       >
         <WhyUs />
       </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={slideFromRight}
+      >
+        <LocationMap />
+      </motion.div>
+      <ScrollToTop/>
     </div>
   );
 }

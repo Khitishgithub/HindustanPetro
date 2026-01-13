@@ -142,3 +142,7 @@ body {
 .goog-te-gadget span {
   display: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}

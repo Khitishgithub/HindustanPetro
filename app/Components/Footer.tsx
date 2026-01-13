@@ -98,7 +98,7 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-red-500 shrink-0" />
                 <span className="leading-relaxed">
-                  6CP6+GC8, Heavy Industrial Area Hathkhoj, Charoda,
+                  Heavy Industrial Area Hathkhoj, Charoda,
                   Chhattisgarh 490024
                 </span>
               </li>

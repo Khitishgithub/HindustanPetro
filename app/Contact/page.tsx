@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { toast } from "sonner";
 import { Mail, MapPin, Phone, ArrowRight } from "lucide-react";
+import LocationMap from "../Components/HeroSection/LocationMap";
 
 const patterns = {
   name: /^[A-Za-z\s]{2,}$/,
@@ -120,24 +121,23 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* ---------------- CONTACT INFO ---------------- */}
       <section className="container mx-auto px-6 py-20">
         <div className="grid gap-10 md:grid-cols-3">
           {[
             {
               icon: <MapPin size={24} />,
               title: "Our Address",
-              value: "123 Industrial Park, New Delhi, India",
+              value: "Heavy Industrial Area Hathkhoj, Charoda,Chhattisgarh 490024",
             },
             {
               icon: <Mail size={24} />,
               title: "Email Us",
-              value: "info@company.com",
+              value: "Hindustanpetro2020@mail.com",
             },
             {
               icon: <Phone size={24} />,
               title: "Call Us",
-              value: "+91 98765 43210",
+              value: "+91 7987584003",
             },
           ].map((item, index) => (
             <div
@@ -152,6 +152,9 @@ const ContactPage = () => {
             </div>
           ))}
         </div>
+      </section>
+      <section>
+        <LocationMap />
       </section>
 
       <section className="bg-gray-100 py-20">
