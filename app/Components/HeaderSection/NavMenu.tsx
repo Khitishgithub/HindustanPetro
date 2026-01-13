@@ -30,7 +30,7 @@ const NavMenu: React.FC = () => {
   const [search, setSearch] = useState("");
 
   const products = [
-    { name: "Product Category 1", href: "/products/1" },
+    { name: "Light Diesel Oil", href: "/products/1" },
     { name: "Product Category 2", href: "/products/2" },
     { name: "Product Category 3", href: "/products/3" },
     { name: "Product Category 4", href: "/products/4" },
