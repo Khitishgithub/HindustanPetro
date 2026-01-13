@@ -28,7 +28,7 @@ const Footer = () => {
                 className="me-3 object-contain"
               />
             </Link>
-            <span>Hindustan Petr By Products</span>
+           
           </div>
 
           {/* LINKS / PRODUCTS / CONTACT */}
