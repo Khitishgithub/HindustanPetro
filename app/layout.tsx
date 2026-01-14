@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "sonner";
 import Footer from "./Components/Footer";
 import NavMenu from "./Components/HeaderSection/NavMenu";
 import TopBar from "./Components/TopBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const montserrat = localFont({
+  src: [
+    {
+      path: "../public/font/Montserrat-Medium.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/font/Montserrat-Medium.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    // Add more font weights as needed
+  ],
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${montserrat.variable} antialiased flex flex-col min-h-screen`}
       >
         <header className="fixed top-0 left-0 w-full z-50">
           <TopBar />
