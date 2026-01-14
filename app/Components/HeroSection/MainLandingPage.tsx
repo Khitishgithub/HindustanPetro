@@ -70,13 +70,14 @@ const MainLandingPage: React.FC = () => {
           <CarouselContent>
             {slides.map((slide, index) => (
               <CarouselItem key={index}>
-                <div className="relative h-[75vh] overflow-x-hidden">
+                <div className="relative h-[75svh] overflow-hidden">
+
                   {/* Image with zoom animation */}
                   <motion.div
-                    initial={{ scale: 1.1 }}
+                    initial={{ scale: 1.05 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 overflow-y-hidden"
                   >
                     <Image
                       src={slide.image}

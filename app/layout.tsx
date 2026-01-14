@@ -35,7 +35,7 @@ export default function RootLayout({
           <NavMenu />
         </header>
 
-        <main className="flex-1 pt-50 xl:pt-24">{children}</main>
+        <main className="flex-1 pt-40 xl:pt-24">{children}</main>
 
         <footer className="mt-auto">
           <Footer />

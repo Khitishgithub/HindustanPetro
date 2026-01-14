@@ -89,9 +89,9 @@ const NavMenu: React.FC = () => {
                   </NavigationMenuTrigger>
 
                   <NavigationMenuContent className="bg-transparent shadow-none border-none">
-                    <div className="w-[560px] rounded-2xl bg-white shadow-2xl overflow-hidden">
+                    <div className="w-140 rounded-2xl bg-white shadow-2xl overflow-hidden">
                       {/* HEADER */}
-                      <div className="bg-gradient-to-r from-[#3d5a80] to-[#2d4a70] p-5 text-white">
+                      <div className="bg-linear-to-r from-[#3d5a80] to-[#2d4a70] p-5 text-white">
                         <h4 className="text-lg font-semibold">
                           Explore Products
                         </h4>
@@ -111,7 +111,7 @@ const NavMenu: React.FC = () => {
                       </div>
 
                       {/* PRODUCT LIST */}
-                      <ScrollArea className="h-[280px] px-5">
+                      <ScrollArea className="h-70 px-5">
                         <div className="grid grid-cols-2 gap-4 pr-3">
                           {filteredProducts.length ? (
                             filteredProducts.map((product) => (
@@ -119,7 +119,7 @@ const NavMenu: React.FC = () => {
                                 <Link
                                   href={product.href}
                                   className={`
-                                    rounded-xl border p-4 transition
+                                    rounded-xl border p-4 mt-4 transition
                                     hover:-translate-y-1 hover:shadow-lg
                                     ${
                                       pathname === product.href
@@ -235,7 +235,7 @@ const NavMenu: React.FC = () => {
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                       placeholder="Search products..."
-                      className="pl-10 bg-white/10 text-white"
+                      className="pl-10 bg-white/10 text-white placeholder:text-white/60"
                     />
                   </div>
 
