@@ -18,7 +18,7 @@ const montserrat = localFont({
       weight: "700",
       style: "normal",
     },
-    // Add more font weights as needed
+   
   ],
   variable: "--font-montserrat",
 });
@@ -37,12 +37,12 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="fixed top-0 left-0 w-full z-50">
+        <header className="fixed top-0 left-0 w-full z-50 mb-4" >
           <TopBar />
           <NavMenu />
         </header>
 
-        <main className="flex-1 pt-40 xl:pt-24">{children}</main>
+        <main className="flex-1 pt-40 ">{children}</main>
 
         <footer className="mt-auto">
           <Footer />
