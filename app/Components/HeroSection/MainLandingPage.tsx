@@ -1,11 +1,9 @@
 "use client";
-
 import * as React from "react";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import { motion, AnimatePresence } from "framer-motion";
 import type { CarouselApi } from "@/components/ui/carousel";
-
 import {
   Carousel,
   CarouselContent,
@@ -43,122 +41,122 @@ const MainLandingPage: React.FC = () => {
     if (!api) return;
 
     setCurrent(api.selectedScrollSnap());
-
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
 
   return (
-    <section className="relative w-full overflow-x-hidden mt-5 mb-5">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+    <div className="relative w-full h-screen overflow-hidden">
+      <Carousel
+        setApi={setApi}
+        className="w-full h-full"
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+        opts={{
+          loop: true,
+        }}
       >
-        <Carousel
-          setApi={setApi}
-          opts={{ loop: true }}
-          plugins={[
-            Autoplay({
-              delay: 4000,
-              stopOnInteraction: false,
-            }),
-          ]}
-          className="w-full"
-        >
-          <CarouselContent>
-            {slides.map((slide, index) => (
-              <CarouselItem key={index}>
-                <div className="relative h-[75svh] overflow-hidden">
+        <CarouselContent className="h-[75vh] md:h-[85vh]">
+          {slides.map((slide, index) => (
+            <CarouselItem key={index} className="relative h-full">
+             
+              <div className="absolute inset-0 overflow-hidden ">
+                <motion.div
+                  className="relative w-full h-full"
+                  initial={{ scale: 1 }}
+                  animate={{ scale: 1.1 }}
+                  transition={{
+                    duration: 10,
+                    ease: "linear",
+                  }}
+                >
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    fill
+                    className="object-cover"
+                    priority={index === 0}
+                  />
+                </motion.div>
+              </div>
 
-                  {/* Image with zoom animation */}
-                  <motion.div
-                    initial={{ scale: 1.05 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="absolute inset-0 overflow-y-hidden"
-                  >
-                    <Image
-                      src={slide.image}
-                      alt={slide.title}
-                      fill
-                      priority={index === 0}
-                      className="object-cover"
-                    />
-                  </motion.div>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent z-10" />
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#3d5a80]/60 to-[#2d4a70]/70" />
+              {/* Text with staggered animations */}
+              <div className="relative z-20 flex flex-col justify-center h-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                <AnimatePresence mode="wait">
+                  {current === index && (
+                    <motion.div
+                      key={`content-${index}`}
+                      className="max-w-2xl space-y-6"
+                    >
+                      <motion.h1
+                        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -30 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                      >
+                        {slide.title}
+                      </motion.h1>
 
-                  {/* Text with staggered animations */}
-                  <div className="relative z-10 flex h-full items-center">
-                    <div className="container mx-auto px-6">
-                      <AnimatePresence mode="wait">
-                        <motion.div
-                          key={current}
-                          initial={{ opacity: 0, x: -30 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: 30 }}
-                          transition={{ duration: 0.5 }}
-                          className="max-w-3xl text-white"
-                        >
-                          <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="text-4xl md:text-6xl font-bold mb-6"
+                      <motion.p
+                        className="text-lg sm:text-xl text-gray-200 leading-relaxed"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -30 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                      >
+                        {slide.description}
+                      </motion.p>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -30 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                      >
+                        <Link href="/Contact">
+                          <Button
+                            size="lg"
+                            className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
                           >
-                            {slide.title}
-                          </motion.h1>
-                          <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            className="text-lg md:text-xl text-white/90"
-                          >
-                            {slide.description}
-                          </motion.p>
-                          <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.6 }}
-                          >
-                            <Link href="/Contact">
-                              <Button className="bg-white text-[#3d5a80] hover:bg-gray-100 font-semibold cursor-pointer mt-4 transition-transform hover:scale-105">
-                                Contact Us
-                              </Button>
-                            </Link>
-                          </motion.div>
-                        </motion.div>
-                      </AnimatePresence>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+                            Contact Us
+                          </Button>
+                        </Link>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
 
-          {/* Bottom Center Indicators with animation */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-            {slides.map((_, index) => (
-              <motion.button
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                className={`h-0.75 w-10 transition-all duration-300 ${
-                  current === index ? "bg-red-600" : "bg-red-600/40"
-                }`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
-              />
-            ))}
-          </div>
-        </Carousel>
-      </motion.div>
-    </section>
+        {/* Bottom Center Indicators with animation */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+          {slides.map((_, index) => (
+            <motion.button
+              key={index}
+              onClick={() => api?.scrollTo(index)}
+              className={`h-0.75 w-10 transition-all duration-300 ${
+                current === index ? "bg-red-600" : "bg-red-600/40"
+              }`}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+            />
+          ))}
+        </div>
+      </Carousel>
+    </div>
   );
 };
 

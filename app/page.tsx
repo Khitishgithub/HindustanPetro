@@ -1,4 +1,5 @@
 "use client";
+
 import { motion, Variants } from "framer-motion";
 import About from "./About/page";
 import Products from "./Components/HeroSection/Products";
@@ -9,56 +10,30 @@ import MainLandingPage from "./Components/HeroSection/MainLandingPage";
 import LocationMap from "./Components/HeroSection/LocationMap";
 import ScrollToTop from "./Components/ScrollToTop";
 
-
 export default function Home() {
-  // Animation variants for sliding in from left
-  const slideFromLeft: Variants = {
+  // Simple fade-in animation (no slide, no scale)
+  const fadeIn: Variants = {
     hidden: {
       opacity: 0,
-      x: -60,
-      scale: 0.95,
     },
     visible: {
       opacity: 1,
-      x: 0,
-      scale: 1,
       transition: {
-        duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94],
-        opacity: { duration: 0.4 },
-      },
-    },
-  };
-
-  // Animation variants for sliding in from right
-  const slideFromRight: Variants = {
-    hidden: {
-      opacity: 0,
-      x: 60,
-      scale: 0.95,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94],
-        opacity: { duration: 0.4 },
+        duration: 0.45,
+        ease: "easeOut",
       },
     },
   };
 
   return (
     <div className="overflow-hidden">
-      <div>
-        <MainLandingPage />
-      </div>
+      <MainLandingPage />
+
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        variants={slideFromLeft}
+        variants={fadeIn}
       >
         <About />
       </motion.div>
@@ -67,7 +42,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        variants={slideFromRight}
+        variants={fadeIn}
       >
         <Products />
       </motion.div>
@@ -76,7 +51,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        variants={slideFromLeft}
+        variants={fadeIn}
       >
         <Team />
       </motion.div>
@@ -85,7 +60,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        variants={slideFromRight}
+        variants={fadeIn}
       >
         <QualityPolicy />
       </motion.div>
@@ -95,19 +70,21 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        variants={slideFromLeft}
+        variants={fadeIn}
       >
         <WhyUs />
       </motion.div>
+
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        variants={slideFromRight}
+        variants={fadeIn}
       >
         <LocationMap />
       </motion.div>
-      <ScrollToTop/>
+
+      <ScrollToTop />
     </div>
   );
 }
