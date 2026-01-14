@@ -33,18 +33,17 @@ const TopBar: React.FC = () => {
     <div className="bg-white border-b border-gray-200 text-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3">
-
           {/* Left: Logo + Info */}
           <div className="flex items-center gap-8">
             {/* Logo */}
             <Link href="/" className="shrink-0">
               <Image
-                src="/Images/Logo.png"       
+                src="/Images/Logo.png"
                 alt="Hindustan Petro By Products"
                 width={160}
                 height={60}
                 priority
-                className="h-auto w-[80px] md:w-[140px] object-contain"
+                className="h-auto w-[80px] md:w-[100px] object-contain"
               />
             </Link>
 
@@ -58,9 +57,7 @@ const TopBar: React.FC = () => {
                   <div className="text-xs xl:text-base font-semibold">
                     Mon - Sat : 9.00 - 19.30
                   </div>
-                  <div className="text-xs text-gray-500">
-                    Sunday : Closed
-                  </div>
+                  <div className="text-xs text-gray-500">Sunday : Closed</div>
                 </div>
               </div>
 
@@ -78,8 +75,6 @@ const TopBar: React.FC = () => {
                   </div>
                 </div>
               </a>
-
-           
             </div>
           </div>
 

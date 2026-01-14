@@ -14,13 +14,13 @@ import { Button } from "@/components/ui/button";
 
 const slides = [
   {
-    image: "/Images/Image2.jpg",
+    image: "/Images/Image1.jpg",
     title: "Trusted Petrochemical Solutions",
     description:
       "Delivering high-quality petroleum products backed by decades of expertise and industry trust.",
   },
   {
-    image: "/Images/Image1.jpg",
+    image: "/Images/Image2.jpg",
     title: "Powering Industries Since 1970",
     description:
       "A legacy of excellence, reliability, and innovation in the petrochemical sector.",
