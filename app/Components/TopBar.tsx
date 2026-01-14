@@ -42,7 +42,7 @@ const TopBar: React.FC = () => {
                 src="/Images/Logo.png"       
                 alt="Hindustan Petro By Products"
                 width={160}
-                height={90}
+                height={60}
                 priority
                 className="h-auto w-[80px] md:w-[140px] object-contain"
               />
