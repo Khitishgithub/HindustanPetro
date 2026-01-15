@@ -144,10 +144,22 @@ body {
   font-family: inherit !important;
 }
 
-.goog-te-gadget span {
-  display: none;
-}
+
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* Normalize dropdown appearance */
+.goog-te-gadget select {
+  font-size: 12px !important;
+  padding: 4px 6px !important;
+  border-radius: 4px;
+  cursor: pointer;
 }

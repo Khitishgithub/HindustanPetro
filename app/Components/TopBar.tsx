@@ -13,7 +13,8 @@ const TopBar: React.FC = () => {
       new window.google.translate.TranslateElement(
         {
           pageLanguage: "en",
-          includedLanguages: "en,hi,mr,gu,ta,te,bn,pa,kn,ml",
+          includedLanguages:
+            "en,hi,mr,gu,ta,te,bn,pa,kn,ml,ur,or,as,sa,ne,sd,fr,de,es,ar,zh-CN,ja,ru",
           layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
           autoDisplay: false,
         },
@@ -33,10 +34,10 @@ const TopBar: React.FC = () => {
     <div className="bg-white border-b border-gray-200 text-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3">
-          {/* Left: Logo + Info */}
+          {/* Left Section */}
           <div className="flex items-center gap-8">
             {/* Logo */}
-            <Link href="/" className="shrink-0">
+            <Link href="/" className="flex items-center gap-3 shrink-0">
               <Image
                 src="/Images/Logo.png"
                 alt="Hindustan Petro By Products"
@@ -48,7 +49,7 @@ const TopBar: React.FC = () => {
             </Link>
 
             {/* Info Section */}
-            <div className="hidden md:flex items-center gap-18">
+            <div className="hidden md:flex items-center gap-16">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 border rounded flex items-center justify-center">
                   <MapPin className="w-5 h-5" />
@@ -78,12 +79,19 @@ const TopBar: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Language Selector */}
           <div className="flex flex-col items-end">
-            <div
-              id="google_translate_element"
-              className="border rounded px-2 py-1"
-            />
+            <div className="relative">
+              <div
+                id="google_translate_element"
+                className="flex items-center gap-2 border rounded px-3 py-1"
+              >
+                <span className="text-xs text-gray-600 whitespace-nowrap">
+                  Select Language
+                </span>
+                <div />
+              </div>
+            </div>
+
             <span className="text-[11px] text-gray-500 mt-1">
               Powered by Google Translate
             </span>
