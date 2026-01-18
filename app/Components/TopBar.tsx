@@ -18,7 +18,7 @@ const TopBar: React.FC = () => {
           layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
           autoDisplay: false,
         },
-        "google_translate_element"
+        "google_translate_element",
       );
     };
 
@@ -32,19 +32,19 @@ const TopBar: React.FC = () => {
 
   return (
     <div className="bg-white border-b border-gray-200 text-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-3">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between">
           {/* Left Section */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-12">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <Image
                 src="/Images/Logo.png"
                 alt="Hindustan Petro By Products"
-                width={160}
+                width={190}
                 height={60}
                 priority
-                className="h-auto w-20 md:w-25 object-contain"
+                className="h-auto w-23 md:w-30 object-contain"
               />
             </Link>
 
