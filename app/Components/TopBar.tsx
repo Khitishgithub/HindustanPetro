@@ -44,7 +44,7 @@ const TopBar: React.FC = () => {
                 width={160}
                 height={60}
                 priority
-                className="h-auto w-[80px] md:w-[100px] object-contain"
+                className="h-auto w-20 md:w-25 object-contain"
               />
             </Link>
 

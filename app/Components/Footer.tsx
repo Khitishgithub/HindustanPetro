@@ -1,15 +1,5 @@
 import Image from "next/image";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Github,
-  Dribbble,
-  Linkedin,
-  MapPin,
-  Mail,
-  Phone,
-} from "lucide-react";
+import { Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { products } from "@/utils/data";
 
@@ -40,7 +30,7 @@ const Footer = () => {
           <div>
             <h2 className="mb-5 text-sm font-bold uppercase text-heading relative inline-block group">
               Links
-              <span className="absolute left-0 -bottom-1 h-[2px] w-1/2 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 h-0.5 w-1/2 bg-red-500 transition-all duration-300 group-hover:w-full" />
             </h2>
             <ul className="space-y-3 text-sm text-body font-medium">
               <li>
@@ -91,7 +81,7 @@ const Footer = () => {
           <div>
             <h2 className="mb-5 text-sm font-bold uppercase text-heading relative inline-block group">
               Contact
-              <span className="absolute left-0 -bottom-1 h-[2px] w-1/2 bg-red-500 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 h-0.5 w-1/2 bg-red-500 transition-all duration-300 group-hover:w-full" />
             </h2>
             <ul className="space-y-4 text-sm text-body">
               <li className="flex gap-3">

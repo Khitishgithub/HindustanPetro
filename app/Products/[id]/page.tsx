@@ -35,7 +35,7 @@ const ProductDetailPage = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-[#3d5a80] to-[#2d4a70] py-20 text-white">
+      <section className="bg-linear-to-r from-[#3d5a80] to-[#2d4a70] py-20 text-white">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
             {product.name}
@@ -148,7 +148,7 @@ const ProductDetailPage = () => {
           </Card>
         </div>
 
-        <div className="mt-12 text-center bg-gradient-to-r from-[#3d5a80] to-[#2d4a70] rounded-2xl p-12 text-white">
+        <div className="mt-12 text-center bg-linear-to-r from-[#3d5a80] to-[#2d4a70] rounded-2xl p-12 text-white">
           <h2 className="text-3xl font-bold mb-4">
             Interested in {product.name}?
           </h2>
