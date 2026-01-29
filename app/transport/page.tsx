@@ -48,7 +48,7 @@ const Transport = () => {
           <div className="relative group">
             {/* <div className="absolute inset-0 bg-[#3d5a80]/20 rounded-2xl transform rotate-3 group-hover:rotate-2 transition" /> */}
             <Image
-              src="/images/Tanker.jpg"
+              src="/Images/Tanker.jpg"
               alt="Tanker Transportation Service"
               width={650}
               height={450}
