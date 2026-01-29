@@ -11,7 +11,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Tag, Menu, X, Search } from "lucide-react";
+import { Tag, Menu, X, Search, Truck } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { products } from "@/utils/data";
@@ -30,7 +30,7 @@ const NavMenu: React.FC = () => {
   const [search, setSearch] = useState("");
 
   const filteredProducts = products.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
+    p.name.toLowerCase().includes(search.toLowerCase()),
   );
 
   const isActive = (href: string) => pathname === href;
@@ -186,10 +186,19 @@ const NavMenu: React.FC = () => {
           </div>
 
           {/* CTA */}
-          <button className="hidden md:flex bg-red-600 hover:bg-red-700 px-6 py-3 text-sm font-semibold uppercase items-center gap-2">
-            <Tag className="w-4 h-4" />
-            GET A QUOTE
-          </button>
+          <Link
+            href="/transport"
+            className={`
+    flex items-center gap-2
+    px-4 py-2 md:px-6 md:py-3
+    text-sm font-semibold uppercase
+    bg-red-600 hover:bg-red-700 transition
+    ${isActive("/transport") ? "ring-2 ring-white/70" : ""}
+  `}
+          >
+            <Truck className="w-4 h-4" />
+            Transport
+          </Link>
 
           {/* MOBILE TOGGLE */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
