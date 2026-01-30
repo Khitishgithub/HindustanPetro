@@ -25,7 +25,7 @@ export const productData: Record<number, ProductDetail> = {
     name: "Light Diesel Oil",
     description:
       "High-quality fuel suitable for industrial and commercial applications.",
-    image: "/Images/LightDieselOil.jpg",
+    image: "/Images/LDO.jpg",
     fullDescription:
       "Our Light Diesel Oil (LDO) is a premium petroleum product refined to meet the highest industry standards. It offers excellent combustion characteristics and is ideal for various industrial applications including furnaces, boilers, and diesel engines. With low sulfur content and optimal viscosity, our LDO ensures efficient performance and reduced emissions.",
     specifications: [

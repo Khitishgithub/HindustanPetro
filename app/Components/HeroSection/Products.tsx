@@ -19,7 +19,7 @@ const products: Product[] = [
     name: "Light Diesel Oil",
     description:
       "High-quality fuel suitable for industrial and commercial applications.",
-    image: "/Images/LightDieselOil.jpg",
+    image: "/Images/LDO.jpg",
   },
   {
     id: 2,
