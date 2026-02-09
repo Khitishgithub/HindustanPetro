@@ -56,7 +56,7 @@ const TopBar: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-xs xl:text-base font-semibold">
-                    Mon - Sat : 9.00 - 19.30
+                    Mon - Sat : 9.00 AM - 7.30 PM
                   </div>
                   <div className="text-xs text-gray-500">Sunday : Closed</div>
                 </div>
