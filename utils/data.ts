@@ -1,7 +1,7 @@
 export const products = [
   { name: "Light Diesel Oil", href: "/Products/1" },
   { name: "Fuel Oil", href: "/Products/2" },
-  { name: "Mixed Hydrocarbon Oil", href: "/Products/3" },
+  { name: "Industrial Oil", href: "/Products/3" },
   { name: "Tyre Oil", href: "/Products/4" },
   { name: "GI Wire", href: "/Products/5" },
 ];
@@ -82,12 +82,12 @@ export const productData: Record<number, ProductDetail> = {
   },
   3: {
     id: 3,
-    name: "Mixed Hydrocarbon Oil",
+    name: "Industrial Oil",
     description:
       "A cost-effective hydrocarbon blend for diverse industrial uses.",
     image: "/Images/MixedHydroCarbon.jpeg",
     fullDescription:
-      "Mixed Hydrocarbon Oil is a versatile blend of petroleum fractions designed to provide a cost-effective energy solution for various industrial processes. This product combines the benefits of different hydrocarbon components to deliver reliable performance across multiple applications while maintaining competitive pricing.",
+      "Industrial Oil is a versatile blend of petroleum fractions designed to provide a cost-effective energy solution for various industrial processes. This product combines the benefits of different hydrocarbon components to deliver reliable performance across multiple applications while maintaining competitive pricing.",
     specifications: [
       "Flash Point: 60°C minimum",
       "Kinematic Viscosity: Variable based on blend",

@@ -5,14 +5,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Factory, Package, Users } from "lucide-react";
 import Image from "next/image";
 
-const products = [
-  "Light Diesel Oil",
-  "Fuel Oil",
-  "Mixed Hydrocarbon Oil",
-  "Tyre Oil",
-  "GI Wire",
-  "Other Petroleum Products",
-];
+// const products = [
+//   "Light Diesel Oil",
+//   "Fuel Oil",
+//   "Mixed Hydrocarbon Oil",
+//   "Tyre Oil",
+//   "GI Wire",
+//   "Other Petroleum Products",
+// ];
 
 const About: React.FC = () => {
   return (
