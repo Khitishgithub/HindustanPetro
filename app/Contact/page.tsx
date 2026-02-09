@@ -127,12 +127,12 @@ const ContactPage = () => {
             {
               icon: <MapPin size={24} />,
               title: "Our Address",
-              value: "Heavy Industrial Area Hathkhoj, Charoda,Chhattisgarh 490024",
+              value: "Heavy Industrial Area Hathkhoj, Chhattisgarh 490024",
             },
             {
               icon: <Mail size={24} />,
               title: "Email Us",
-              value: "Hindustanpetro2020@mail.com",
+              value: "Hindustanpetro2020@gmail.com",
             },
             {
               icon: <Phone size={24} />,

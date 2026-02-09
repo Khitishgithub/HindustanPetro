@@ -87,12 +87,12 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-red-500 shrink-0" />
                 <span className="leading-relaxed">
-                  Heavy Industrial Area Hathkhoj, Charoda, Chhattisgarh 490024
+                  Heavy Industrial Area Hathkhoj, Chhattisgarh 490024
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-red-500 shrink-0" />
-                <span>Hindustanpetro2020@mail.com</span>
+                <span>Hindustanpetro2020@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-red-500 shrink-0" />
@@ -115,7 +115,7 @@ const Footer = () => {
 
           {/* SOCIAL ICONS */}
           <div className="flex justify-center gap-5 sm:justify-end">
-            <Link href="mailto:Hindustanpetro2020@mail.com">
+            <Link href="mailto:Hindustanpetro2020@gmail.com">
               <Mail className="h-5 w-5 cursor-pointer text-body hover:text-blue-500 transition" />
             </Link>
             <Instagram className="h-5 w-5 cursor-pointer text-body hover:text-pink-500 transition" />
