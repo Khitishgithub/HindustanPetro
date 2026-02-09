@@ -72,7 +72,12 @@ const TopBar: React.FC = () => {
                 <div>
                   <div className="font-semibold">+91 7987584003</div>
                   <div className="text-xs text-gray-500">
-                    Hindustanpetro2020@mail.com
+                    <a
+                      href="mailto:Hindustanpetro2020@gmail.com"
+                      className="hover:underline"
+                    >
+                      Hindustanpetro2020@gmail.com
+                    </a>
                   </div>
                 </div>
               </a>
