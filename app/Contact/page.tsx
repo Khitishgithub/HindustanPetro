@@ -13,7 +13,7 @@ const patterns = {
   email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   mobile: /^[0-9]{10}$/,
   subject: /^.{3,}$/,
-  message: /^.{10,}$/,
+  message: /^.{5,}$/,
 };
 
 const ContactPage = () => {
@@ -66,7 +66,7 @@ const ContactPage = () => {
     if (!values.message.trim()) {
       newErrors.message = "Message is required";
     } else if (!patterns.message.test(values.message)) {
-      newErrors.message = "Message must be at least 10 characters";
+      newErrors.message = "Message must be at least 5 characters";
     }
 
     setErrors(newErrors);

@@ -62,10 +62,7 @@ const TopBar: React.FC = () => {
                 </div>
               </div>
 
-              <a
-                href="tel:+917987584003"
-                className="flex items-center gap-3 hover:text-blue-600 transition"
-              >
+              <div className="flex items-center gap-3 hover:text-blue-600 transition">
                 <div className="w-10 h-10 border rounded flex items-center justify-center">
                   <Phone className="w-5 h-5" />
                 </div>
@@ -80,7 +77,7 @@ const TopBar: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
 

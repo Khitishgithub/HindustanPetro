@@ -33,7 +33,7 @@ const products: Product[] = [
     name: "Mixed Hydrocarbon Oil",
     description:
       "A cost-effective hydrocarbon blend for diverse industrial uses.",
-    image: "/Images/HydroCarbonOil.png",
+    image: "/Images/MixedHydroCarbon.jpeg",
   },
   {
     id: 4,

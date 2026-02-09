@@ -85,7 +85,7 @@ export const productData: Record<number, ProductDetail> = {
     name: "Mixed Hydrocarbon Oil",
     description:
       "A cost-effective hydrocarbon blend for diverse industrial uses.",
-    image: "/Images/HydroCarbonOil.png",
+    image: "/Images/MixedHydroCarbon.jpeg",
     fullDescription:
       "Mixed Hydrocarbon Oil is a versatile blend of petroleum fractions designed to provide a cost-effective energy solution for various industrial processes. This product combines the benefits of different hydrocarbon components to deliver reliable performance across multiple applications while maintaining competitive pricing.",
     specifications: [
